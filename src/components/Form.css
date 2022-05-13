@@ -1,0 +1,61 @@
+form{
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    background-color: #89b289;
+    border-radius: 10px;
+    padding: 50px;
+    margin-top: 20%;
+    margin-left: 5%;
+    color: white;
+
+}
+
+
+label{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+
+
+input{
+    padding: 5px 10px;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-space: 20px;
+
+}
+textarea{
+    margin-top: 10px;
+
+}
+
+#frequency{
+    display: inline-block;
+    margin-left: 3vh;
+}
+
+button{
+    padding: 10px 15px;
+
+
+}
+
+.remarks{
+    margin-top: 2px;
+    margin-right: 10px;
+
+
+}
+
+
+textarea{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+
+}
