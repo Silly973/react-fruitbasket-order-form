@@ -16,9 +16,8 @@ export function fruitCounter ({emoji, title, setCounter, counter}){
     return (
 
 
-        <fieldset>
-
-            <div className="fruit-counter">
+        <section className="fruit-counter">
+            <article >
                 <h2>{emoji} {title}</h2>
                 <button
                     type="button"
@@ -30,8 +29,8 @@ export function fruitCounter ({emoji, title, setCounter, counter}){
                     type="button"
                     onClick={increaseCounter}
                 >+</button>
-            </div>
-        </fieldset>
+            </article>
+        </section>
     );
 }
 

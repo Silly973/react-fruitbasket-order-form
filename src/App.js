@@ -9,23 +9,27 @@ import screenshotLogo from './assets/screenshot-logo.png';
 function App() {
     const [counterAardbeien, setCounterAardbeien] = useState(0);
     const [counterBananen, setCounterBananen] = useState(0);
-    const [counterKiwis, setCounterKiwis] = useState(0);
     const [counterAppels, setCounterAppels] = useState(0);
+    const [counterKiwis, setCounterKiwis] = useState(0);
 
     function resetCounter() {
         setCounterAardbeien(0);
         setCounterBananen(0);
-        setCounterKiwis(0);
         setCounterAppels(0);
+        setCounterKiwis(0);
+
     }
+
+    console.log("Fruit bestelling- aardbeien: {counterAardbeien}, bananen: {counterBananen}, appel: {counterAppels}, kiwi's: {counterKiwis}");
+
 
 
 
     return (
         <>
-            <img src={screenshotLogo} width="750" height="150" alt="logo-image"/>
+            <img src={screenshotLogo} width="670" height="150" alt="logo-image"/>
 
-            <div className="fruitform">
+            <section className="fruitform">
                 <FruitCounter
                     emoji="🍓"
                     title="Aardbeien"
@@ -54,10 +58,7 @@ function App() {
                 <button type="button" onClick={resetCounter} className="resetButton">
                     Reset
                 </button>
-            </div>
-
-
-
+            </section>
 
             <Form/>
 

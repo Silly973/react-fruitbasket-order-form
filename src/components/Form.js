@@ -2,17 +2,19 @@ import React, {useState} from "react";
 import './Form.css';
 export function Form(props) {
 
-    // functions Submitform
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [age, setAge] = useState(0);
     const [zipCode, setZipCode] = useState('');
-    const [frequency, setFrequency] = useState('dayly');
-    const [moment, setMoment] = useState('daytime');
+    const [frequency, toggleFrequency] = useState('dayly');
+    const [moment, toggleMoment] = useState('daytime');
     const [remarks, setRemarks] = useState('');
-    const [terms, setTerms] = useState(false);
+    const [terms, toggleTerms] = useState(false);
+
+
 
     function handleSubmit(e) {
+        e.preventDefault();
         console.log(
             {firstName},
             {lastName},
@@ -29,6 +31,7 @@ export function Form(props) {
     return (
         <div className="orderform">
             <form>
+                <h3>Bestelformulier:</h3>
                 <label htmlFor="firstName">
                     Voornaam
                     <input
@@ -72,7 +75,7 @@ export function Form(props) {
                         name="frequency"
                         id="frequency"
                         value={frequency}
-                        onChange={(e) => setFrequency(e.target.value)}
+                        onChange={(e) => toggleFrequency(e.target.value)}
                     >
                         <option value="dayly">Dagelijks</option>
                         <option value="weekly">Wekelijks</option>
@@ -82,17 +85,19 @@ export function Form(props) {
                 <label htmlFor="moment-day">
                     <input
                         type="radio"
+                        id="moment-day"
                         value={'daytime'}
                         checked={moment === 'daytime'}
-                        onChange={(e) => setMoment(e.target.value)}
+                        onChange={(e) => toggleMoment(e.target.value)}
                     />Overdag
                 </label>
                 <label htmlFor="moment-evening">
                     <input
                         type="radio"
+                        id="moment-evening"
                         value={'evening'}
                         checked={moment === 'evening'}
-                        onChange={(e) => setMoment(e.target.value)}
+                        onChange={(e) => toggleMoment(e.target.value)}
                     />'s Avonds
                 </label>
                 <label htmlFor="remarks" className="remarks">
@@ -100,8 +105,8 @@ export function Form(props) {
                     <textarea
                         name="remarks"
                         id="comment"
-                        cols="30"
-                        rows="10"
+                        cols="40"
+                        rows="6"
                         value={remarks}
                         onChange={(e) => setRemarks(e.target.value)}
 
@@ -111,16 +116,19 @@ export function Form(props) {
                     <input
                         type="checkbox"
                         name="terms"
+                        id="terms-field"
+                        value={terms}
                         checked={terms}
-                        onChange={(e) => setTerms(!terms)}
+                        onChange={(e) => toggleTerms(e.target.checked)}
                     />
                     Ik ga akkoord met de voorwaarden
+
                 </label>
                 <button
                     type="sendButton"
                     disabled={!terms}
                     onClick={handleSubmit}
-                >Verzenden
+                >Verzend
                 </button>
             </form>
         </div>
