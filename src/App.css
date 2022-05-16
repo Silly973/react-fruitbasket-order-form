@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Roboto Light",sans-serif;
+
+}
+
+fruitform {
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    justify-content: space-between;
+    align-items: start;
+    border-radius: 10px;
+    margin: 3px auto;
+    padding: 20px;
+}
+
+.resetButton{
+    width: 50%;
+    margin-left: 10px;
+    border-color: #beb7b7;
+
+
+}
+

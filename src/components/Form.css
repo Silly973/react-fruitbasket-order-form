@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    width: 40rem;
+    flex-flow: column nowrap;
+    background-color: #89b289;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 8%;
+    margin-left: -15px;
+    color: white;
+
+}
+
+
+label{
+    margin-left: 2px;
+    margin-right: 5px;
+
+
+}
+
+
+
+input{
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+#frequency{
+    margin-left: 3vh;
+}
+
+button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: black;
+    width: 30%;
+
+
+}
+
+#moment-day{
+    display: inline-block;
+    margin-top: 1vh;
+}
+
+#moment-evening{
+    display: inline-block;
+    margin-top: 1vh;
+}
+
+.remarks{
+    margin-top: 1vh;
+    margin-right: 10px;
+    max-width: 80%;
+
+}
+
+textarea{
+    display: block;
+    max-width: 400px;
+
+
+}
+.error{
+    font-size: 10px;
+    color: red;
+    margin: 4px;
+}
